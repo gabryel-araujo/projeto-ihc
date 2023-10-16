@@ -7,6 +7,13 @@ import {
   IconButton,
   Card,
 } from "@material-tailwind/react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCarSide,
+  faTags,
+  faQuestion,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
 
 export function Nav() {
   const [openNav, setOpenNav] = React.useState(false);
@@ -26,9 +33,12 @@ export function Nav() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center lilitaOne">
-          Carros
-        </a>
+        <section className="flex items-center gap-1">
+          <FontAwesomeIcon icon={faCarSide} />
+          <a href="#" className="flex items-center lilitaOne">
+            Carros
+          </a>
+        </section>
       </Typography>
       <Typography
         as="li"
@@ -36,9 +46,12 @@ export function Nav() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center lilitaOne">
-          Marcas
-        </a>
+        <section className="flex items-center gap-1">
+          <FontAwesomeIcon icon={faTags} />
+          <a href="#" className="flex items-center lilitaOne">
+            Marcas
+          </a>
+        </section>
       </Typography>
       <Typography
         as="li"
@@ -46,9 +59,12 @@ export function Nav() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center lilitaOne">
-          Quem somos nós?
-        </a>
+        <section className="flex items-center gap-1">
+          <FontAwesomeIcon icon={faQuestion} />
+          <a href="#" className="flex items-center lilitaOne">
+            Sobre nós
+          </a>
+        </section>
       </Typography>
       <Typography
         as="li"
@@ -56,9 +72,13 @@ export function Nav() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center lilitaOne">
-          Conta
-        </a>
+        <section className="flex items-center gap-1">
+          <FontAwesomeIcon icon={faUser} />
+
+          <a href="#" className="flex items-center lilitaOne">
+            Conta
+          </a>
+        </section>
       </Typography>
     </ul>
   );
