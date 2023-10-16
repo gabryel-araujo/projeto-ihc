@@ -61,7 +61,7 @@ export function Nav() {
       >
         <section className="flex items-center gap-1">
           <FontAwesomeIcon icon={faQuestion} />
-          <a href="#" className="flex items-center lilitaOne">
+          <a href="#quemSomos" className="flex items-center lilitaOne">
             Sobre nós
           </a>
         </section>
@@ -85,7 +85,7 @@ export function Nav() {
 
   return (
     <>
-      <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4">
+      <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4 fixed">
         <div className="flex items-center justify-between text-blue-gray-900">
           <Typography
             as="a"
