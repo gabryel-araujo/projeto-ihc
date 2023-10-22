@@ -1,27 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.background-gt {
+  background-image: url(/mercedes-preta.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
+.lilitaOne {
+  font-family: "Lilita One", sans-serif;
+}
+
+.tiltNeon {
+  font-family: "Tilt Neon", sans-serif;
+}
+
+.gradient-bg {
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    0deg,
+    rgba(255, 255, 255, 1) 4%,
+    rgb(196, 196, 196) 40%,
+    rgba(0, 0, 0, 1) 97%
+  );
+}
+
+.sombra {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
