@@ -1,0 +1,184 @@
+{
+  "carros": [
+    {
+      "marca": "BMW",
+      "modelo": "M2",
+      "ano": 2023,
+      "cor": "Azul",
+      "categoria": "Sedan",
+      "src": "/BMW-M2.png",
+      "preco": 5000,
+      "descricao": "Um sedã esportivo de alto desempenho que combina elegância e potência. O BMW M2 é conhecido por sua dirigibilidade excepcional e design sofisticado."
+    },
+    {
+      "marca": "BMW",
+      "modelo": "740i",
+      "ano": 2019,
+      "cor": "Preto",
+      "categoria": "Sedan",
+      "src": "/BMW-Sedan-740i.png",
+      "preco": 3200,
+      "descricao": "O BMW 740i é um sedã de luxo que oferece conforto e desempenho excepcionais. Seu design elegante e interior espaçoso fazem dele uma escolha premium."
+    },
+    {
+      "marca": "BMW",
+      "modelo": "X6",
+      "ano": 2021,
+      "cor": "Branco",
+      "categoria": "SUV",
+      "src": "/BMW-X6.png",
+      "preco": 5000,
+      "descricao": "O BMW X6 combina a versatilidade de um SUV com a esportividade de um cupê. Seu design arrojado e recursos avançados o tornam uma opção de alto nível."
+    },
+    {
+      "marca": "Chevrolet",
+      "modelo": "Camaro",
+      "ano": 2021,
+      "cor": "Preto",
+      "categoria": "Esportivo",
+      "src": "/Chevrolet-Camaro.png",
+      "preco": 4000,
+      "descricao": "Este carro é uma combinação perfeita de potência e elegância, apresentando um motor V8 poderoso que produz um som inconfundível e uma aceleração impressionante. Com suas linhas aerodinâmicas e faróis agressivos, o Camaro é uma obra-prima da engenharia automobilística."
+    },
+    {
+      "marca": "Chevrolet",
+      "modelo": "Corvette C8",
+      "ano": 2019,
+      "cor": "Amarelo",
+      "categoria": "Esportivo",
+      "src": "/Chevrolet-Corvette-C8.png",
+      "preco": 6000,
+      "descricao": "O Chevrolet Corvette C8 é um ícone dos carros esportivos americanos, conhecido por sua potência e desempenho excepcionais. Seu design aerodinâmico e estilo marcante o tornam um clássico moderno."
+    },
+    {
+      "marca": "Chevrolet",
+      "modelo": "Corvette Stingray",
+      "ano": 2019,
+      "cor": "Cobre",
+      "categoria": "Esportivo",
+      "src": "/Chevrolet-Corvette-Stringray-1LT.png",
+      "preco": 7000,
+      "descricao": "O Chevrolet Corvette Stingray é um verdadeiro ícone dos carros esportivos, conhecido por seu design clássico e desempenho impressionante. Dirigir este carro é uma experiência emocionante."
+    },
+    {
+      "marca": "Ferrari",
+      "modelo": "Portofino",
+      "ano": 2020,
+      "cor": "Titanium",
+      "categoria": "Esportivo",
+      "src": "/Ferrari-Portofino.png",
+      "preco": 8000,
+      "descricao": "A Ferrari Portofino é uma obra-prima italiana que combina luxo, desempenho e elegância. Seu motor V8 proporciona uma experiência de condução emocionante."
+    },
+    {
+      "marca": "Ferrari",
+      "modelo": "Sergio",
+      "ano": 2019,
+      "cor": "Amarelo",
+      "categoria": "Esportivo",
+      "src": "/Ferrari-Sergio.png",
+      "preco": 8000,
+      "descricao": "O Ferrari Sergio é uma raridade, uma edição limitada que combina design exclusivo e desempenho de alto nível. É um carro esportivo que atrai olhares por onde passa."
+    },
+    {
+      "marca": "Ferrari",
+      "modelo": "SF90",
+      "ano": 2020,
+      "cor": "Vermelho",
+      "categoria": "Esportivo",
+      "src": "/Ferrari-SF90-Stradale.png",
+      "preco": 9000,
+      "descricao": "O Ferrari SF90 Stradale é um híbrido plug-in que oferece desempenho excepcional. Seu design aerodinâmico e tecnologia avançada o tornam uma escolha de elite."
+    },
+    {
+      "marca": "Mercedes",
+      "modelo": "AMG-GT",
+      "ano": 2018,
+      "cor": "Titanium",
+      "categoria": "Esportivo",
+      "src": "/Mercedes-AMG-GT.png",
+      "preco": 2000,
+      "descricao": "O Mercedes-AMG GT é um carro esportivo de alto desempenho com um design deslumbrante e um motor poderoso. Ele oferece uma experiência de direção emocionante."
+    },
+    {
+      "marca": "Mercedes",
+      "modelo": "E350",
+      "ano": 2020,
+      "cor": "Branco",
+      "categoria": "Sedan",
+      "src": "/Mercedes-Benz-E350.png",
+      "preco": 2100,
+      "descricao": "O Mercedes-Benz E350 é um sedã de luxo que combina conforto, elegância e tecnologia avançada. Seu interior sofisticado o torna ideal para viagens longas."
+    },
+    {
+      "marca": "Mercedes",
+      "modelo": "S450",
+      "ano": 2020,
+      "cor": "Preto",
+      "categoria": "Sedan",
+      "src": "/Mercedes-Benz-S450.png",
+      "preco": 2100,
+      "descricao": "O Mercedes-Benz S450 é um sedã de luxo que oferece um passeio suave e tranquilo. Seu design clássico é um símbolo de status e elegância."
+    },
+    {
+      "marca": "Porsche",
+      "modelo": "911 GT3 RS",
+      "ano": 2021,
+      "cor": "Vermelho",
+      "categoria": "Esportivo",
+      "src": "/Porsche-911-GT3-RS.png",
+      "preco": 4200,
+      "descricao": "O Porsche 911 GT3 RS é um verdadeiro carro de corrida para as ruas. Seu desempenho excepcional e design esportivo fazem dele uma escolha para os entusiastas de velocidade."
+    },
+    {
+      "marca": "Porsche",
+      "modelo": "Cayenne",
+      "ano": 2020,
+      "cor": "Branca",
+      "categoria": "SUV",
+      "src": "/Porsche-Cayenne.png",
+      "preco": 3200,
+      "descricao": "O Porsche Cayenne é um SUV de luxo que combina versatilidade com um desempenho impressionante. Seu interior espaçoso e recursos avançados são ideais para viagens em família."
+    },
+    {
+      "marca": "Porsche",
+      "modelo": "Panamera",
+      "ano": 2020,
+      "cor": "Azul",
+      "categoria": "Sedan",
+      "src": "/Porsche-Panamera.png",
+      "preco": 3200,
+      "descricao": "O Porsche Panamera é um sedã de luxo que oferece uma experiência de direção refinada e conforto excepcional. Seu design moderno e tecnologia avançada o tornam um carro premium."
+    },
+    {
+      "marca": "Tesla",
+      "modelo": "Model 3",
+      "ano": 2021,
+      "cor": "Titanium",
+      "categoria": "Elétrico",
+      "src": "/Tesla-Model-3.png",
+      "preco": 2200,
+      "descricao": "O Tesla Model 3 é um carro elétrico que combina eficiência energética com desempenho surpreendente. Sua tecnologia inovadora e autonomia o tornam uma escolha sustentável."
+    },
+    {
+      "marca": "Tesla",
+      "modelo": "Model X",
+      "ano": 2022,
+      "cor": "Azul",
+      "categoria": "Elétrico",
+      "src": "/Tesla-Model-X.png",
+      "preco": 3000,
+      "descricao": "O Tesla Model X é um SUV elétrico com um design futurista e características avançadas de segurança. Ele oferece uma experiência de condução ecologicamente correta."
+    },
+    {
+      "marca": "Tesla",
+      "modelo": "Model S",
+      "ano": 2022,
+      "cor": "Azul",
+      "categoria": "Elétrico",
+      "src": "/Tesla-Model-S.png",
+      "preco": 3000,
+      "descricao": "O Tesla Model S é um veículo elétrico de luxo que combina inovação tecnológica e desempenho. Com um design elegante e aerodinâmico, este sedan elétrico é alimentado por um motor elétrico poderoso que oferece uma autonomia impressionante. "
+    }
+  ]
+}

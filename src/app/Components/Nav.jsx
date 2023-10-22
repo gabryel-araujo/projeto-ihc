@@ -1,7 +1,7 @@
 import React from "react";
 import {
   Navbar,
-  MobileNav,
+  Collapse,
   Typography,
   Button,
   IconButton,
@@ -15,7 +15,7 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 
-export function Nav() {
+export function Nav({ abrirModal }) {
   const [openNav, setOpenNav] = React.useState(false);
 
   React.useEffect(() => {
@@ -35,24 +35,12 @@ export function Nav() {
       >
         <section className="flex items-center gap-1">
           <FontAwesomeIcon icon={faCarSide} />
-          <a href="#" className="flex items-center lilitaOne">
+          <a href="#carros" className="flex items-center lilitaOne">
             Carros
           </a>
         </section>
       </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <section className="flex items-center gap-1">
-          <FontAwesomeIcon icon={faTags} />
-          <a href="#" className="flex items-center lilitaOne">
-            Marcas
-          </a>
-        </section>
-      </Typography>
+
       <Typography
         as="li"
         variant="small"
@@ -72,12 +60,13 @@ export function Nav() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <section className="flex items-center gap-1">
+        <section
+          className="flex items-center gap-1 hover:cursor-pointer"
+          onClick={abrirModal}
+        >
           <FontAwesomeIcon icon={faUser} />
 
-          <a href="#" className="flex items-center lilitaOne">
-            Conta
-          </a>
+          <a className="flex items-center lilitaOne">Conta</a>
         </section>
       </Typography>
     </ul>
@@ -101,11 +90,11 @@ export function Nav() {
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden lg:block">{navList}</div>
             <Button
-              variant="gradient"
+              // variant="gradient"
               size="sm"
-              className="hidden lg:inline-block"
+              className="hidden lg:inline-block bg-gradient-to-r from-orange-500 to-orange-700"
             >
-              <span>Fale Consoco</span>
+              <span className="text-black font-bold">Fale Consoco</span>
             </Button>
             <IconButton
               variant="text"
@@ -146,12 +135,12 @@ export function Nav() {
             </IconButton>
           </div>
         </div>
-        <MobileNav open={openNav}>
+        <Collapse open={openNav}>
           {navList}
           <Button variant="gradient" size="sm" fullWidth className="mb-2">
             <span>Buy Now</span>
           </Button>
-        </MobileNav>
+        </Collapse>
       </Navbar>
     </>
   );
