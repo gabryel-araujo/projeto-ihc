@@ -12,14 +12,12 @@ import {
   CardFooter,
   Typography,
   Button,
-  Tooltip,
   IconButton,
   Dialog,
   DialogHeader,
   DialogBody,
   DialogFooter,
   Input,
-  Textarea,
 } from "@material-tailwind/react";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
@@ -45,20 +43,8 @@ export default function Home() {
   const [passwordField, setPasswordField] = useState(false);
   const handleOpenPsswd = () => setPasswordField(true);
   const handleClosePsswd = () => setPasswordField(false);
-  const [filtros, setFiltros] = useState([]);
-  const [carrosFiltrados, setCarrosFiltrados] = useState([]);
   const textRef = useRef(null);
   const emailRef = useRef(null);
-
-  // function filtrarCarro(pesquisaRef) {}
-
-  const handleCategoria = (data) => {
-    setFiltros(data);
-  };
-
-  useEffect(() => {
-    console.log(carrosJson);
-  }, []);
 
   return (
     <>
@@ -201,7 +187,7 @@ export default function Home() {
       </div>
       <div className="bg-slate-600 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-4 rounded-md bg-white gap-4">
         <div className="col-span-1 sm:col-span-1 md:col-span-1 lg:col-span-1 flex justify-center">
-          <SidebarWithContentSeparator arrayFiltro={handleCategoria} />
+          <SidebarWithContentSeparator />
         </div>
         <div className="col-span-1 sm:col-span-1 md:col-span-1 lg:col-span-3 flex flex-wrap gap-4 h-auto sm:h-[34rem] overflow-auto justify-center">
           {carrosJson.carros.map((carro) => {
@@ -393,8 +379,14 @@ export default function Home() {
         </DialogFooter>
       </Dialog>
       {/* Footer / Fale conosco */}
-      <div className="h-screen flex flex-col justify-end items-center">
-        <div className="bg-gradient-to-r from-orange-500 to-orange-700 w-full md:w-3/5 h-72 rounded-lg absolute md:mb-52 flex items-center justify-around p-4 gap-2 md:flex-row flex-col">
+      <div
+        className="h-screen flex flex-col justify-end items-center"
+        id="faleConosco"
+      >
+        <div
+          className="bg-gradient-to-r from-orange-500 to-orange-700 w-full md:w-3/5 h-72 rounded-lg absolute md:mb-52 flex items-center justify-around p-4 gap-2 md:flex-row flex-col"
+          id="email"
+        >
           <div className="flex flex-col w-full md:w-1/2">
             <p className="text-white text-4xl sombra lilitaOne">Fale conosco</p>
             <span className="tiltNeon text-white sombra">
@@ -442,7 +434,7 @@ export default function Home() {
             </Button>
           </div>
         </div>
-        <div className="h-72 w-full flex justify-end bg-black">
+        <div className="h-72 w-full bg-black">
           <Footer />
         </div>
       </div>

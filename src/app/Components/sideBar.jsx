@@ -37,7 +37,7 @@ const Toast = Swal.mixin({
   },
 });
 
-export function SidebarWithContentSeparator({ arrayFiltro }) {
+export function SidebarWithContentSeparator() {
   const [open, setOpen] = useState(0);
   const [valorChip, setValorChip] = useState([]);
 
@@ -96,12 +96,8 @@ export function SidebarWithContentSeparator({ arrayFiltro }) {
                       onChange={(e) => {
                         if (e.target.checked) {
                           setValorChip([...valorChip, e.target.value]);
-                          arrayFiltro([...valorChip, e.target.value]);
                         } else {
                           setValorChip(
-                            valorChip.filter((item) => item !== e.target.value)
-                          );
-                          arrayFiltro(
                             valorChip.filter((item) => item !== e.target.value)
                           );
                         }
@@ -123,12 +119,8 @@ export function SidebarWithContentSeparator({ arrayFiltro }) {
                       onChange={(e) => {
                         if (e.target.checked) {
                           setValorChip([...valorChip, e.target.value]);
-                          arrayFiltro([...valorChip, e.target.value]);
                         } else {
                           setValorChip(
-                            valorChip.filter((item) => item !== e.target.value)
-                          );
-                          arrayFiltro(
                             valorChip.filter((item) => item !== e.target.value)
                           );
                         }
@@ -150,12 +142,8 @@ export function SidebarWithContentSeparator({ arrayFiltro }) {
                       onChange={(e) => {
                         if (e.target.checked) {
                           setValorChip([...valorChip, e.target.value]);
-                          arrayFiltro([...valorChip, e.target.value]);
                         } else {
                           setValorChip(
-                            valorChip.filter((item) => item !== e.target.value)
-                          );
-                          arrayFiltro(
                             valorChip.filter((item) => item !== e.target.value)
                           );
                         }
@@ -177,12 +165,8 @@ export function SidebarWithContentSeparator({ arrayFiltro }) {
                       onChange={(e) => {
                         if (e.target.checked) {
                           setValorChip([...valorChip, e.target.value]);
-                          arrayFiltro([...valorChip, e.target.value]);
                         } else {
                           setValorChip(
-                            valorChip.filter((item) => item !== e.target.value)
-                          );
-                          arrayFiltro(
                             valorChip.filter((item) => item !== e.target.value)
                           );
                         }
@@ -232,12 +216,8 @@ export function SidebarWithContentSeparator({ arrayFiltro }) {
                       onChange={(e) => {
                         if (e.target.checked) {
                           setValorChip([...valorChip, e.target.value]);
-                          arrayFiltro([...valorChip, e.target.value]);
                         } else {
                           setValorChip(
-                            valorChip.filter((item) => item !== e.target.value)
-                          );
-                          arrayFiltro(
                             valorChip.filter((item) => item !== e.target.value)
                           );
                         }
@@ -259,12 +239,8 @@ export function SidebarWithContentSeparator({ arrayFiltro }) {
                       onChange={(e) => {
                         if (e.target.checked) {
                           setValorChip([...valorChip, e.target.value]);
-                          arrayFiltro([...valorChip, e.target.value]);
                         } else {
                           setValorChip(
-                            valorChip.filter((item) => item !== e.target.value)
-                          );
-                          arrayFiltro(
                             valorChip.filter((item) => item !== e.target.value)
                           );
                         }
@@ -286,12 +262,8 @@ export function SidebarWithContentSeparator({ arrayFiltro }) {
                       onChange={(e) => {
                         if (e.target.checked) {
                           setValorChip([...valorChip, e.target.value]);
-                          arrayFiltro([...valorChip, e.target.value]);
                         } else {
                           setValorChip(
-                            valorChip.filter((item) => item !== e.target.value)
-                          );
-                          arrayFiltro(
                             valorChip.filter((item) => item !== e.target.value)
                           );
                         }
@@ -313,12 +285,8 @@ export function SidebarWithContentSeparator({ arrayFiltro }) {
                       onChange={(e) => {
                         if (e.target.checked) {
                           setValorChip([...valorChip, e.target.value]);
-                          arrayFiltro([...valorChip, e.target.value]);
                         } else {
                           setValorChip(
-                            valorChip.filter((item) => item !== e.target.value)
-                          );
-                          arrayFiltro(
                             valorChip.filter((item) => item !== e.target.value)
                           );
                         }
@@ -340,12 +308,8 @@ export function SidebarWithContentSeparator({ arrayFiltro }) {
                       onChange={(e) => {
                         if (e.target.checked) {
                           setValorChip([...valorChip, e.target.value]);
-                          arrayFiltro([...valorChip, e.target.value]);
                         } else {
                           setValorChip(
-                            valorChip.filter((item) => item !== e.target.value)
-                          );
-                          arrayFiltro(
                             valorChip.filter((item) => item !== e.target.value)
                           );
                         }
@@ -367,12 +331,8 @@ export function SidebarWithContentSeparator({ arrayFiltro }) {
                       onChange={(e) => {
                         if (e.target.checked) {
                           setValorChip([...valorChip, e.target.value]);
-                          arrayFiltro([...valorChip, e.target.value]);
                         } else {
                           setValorChip(
-                            valorChip.filter((item) => item !== e.target.value)
-                          );
-                          arrayFiltro(
                             valorChip.filter((item) => item !== e.target.value)
                           );
                         }
@@ -419,6 +379,7 @@ export function SidebarWithContentSeparator({ arrayFiltro }) {
             return (
               <Chip
                 value={item}
+                key={item}
                 className="bg-gradient-to-r from-orange-500 to-orange-700 text-black text-center"
               />
             );

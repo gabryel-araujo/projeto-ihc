@@ -48,4 +48,8 @@ html {
   .gapMobile {
     gap: 3rem;
   }
+
+  #email {
+    display: none;
+  }
 }

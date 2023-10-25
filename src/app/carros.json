@@ -12,13 +12,13 @@
     },
     {
       "marca": "BMW",
-      "modelo": "740i",
-      "ano": 2019,
-      "cor": "Preto",
+      "modelo": "320i",
+      "ano": 2021,
+      "cor": "Cobre",
       "categoria": "Sedan",
-      "src": "/BMW-Sedan-740i.png",
+      "src": "/BMW-320i.png",
       "preco": 3200,
-      "descricao": "O BMW 740i é um sedã de luxo que oferece conforto e desempenho excepcionais. Seu design elegante e interior espaçoso fazem dele uma escolha premium."
+      "descricao": "O BMW 320i é um sedã de luxo que oferece conforto e desempenho excepcionais. Seu design elegante e interior espaçoso fazem dele uma escolha premium."
     },
     {
       "marca": "BMW",
@@ -92,31 +92,31 @@
     },
     {
       "marca": "Mercedes",
-      "modelo": "AMG-GT",
-      "ano": 2018,
+      "modelo": "A200",
+      "ano": 2020,
       "cor": "Titanium",
-      "categoria": "Esportivo",
-      "src": "/Mercedes-AMG-GT.png",
+      "categoria": "SUV-Compacto",
+      "src": "/Mercedes-A200.png",
       "preco": 2000,
-      "descricao": "O Mercedes-AMG GT é um carro esportivo de alto desempenho com um design deslumbrante e um motor poderoso. Ele oferece uma experiência de direção emocionante."
+      "descricao": "O Mercedes-AMG GT é um SUV-Compacto de alto desempenho com um design deslumbrante e um motor poderoso. Ele oferece uma experiência de direção emocionante."
     },
     {
       "marca": "Mercedes",
-      "modelo": "E350",
-      "ano": 2020,
-      "cor": "Branco",
+      "modelo": "AMG GT",
+      "ano": 2018,
+      "cor": "Titanium",
       "categoria": "Sedan",
-      "src": "/Mercedes-Benz-E350.png",
+      "src": "/Mercedes-AMG.png",
       "preco": 2100,
       "descricao": "O Mercedes-Benz E350 é um sedã de luxo que combina conforto, elegância e tecnologia avançada. Seu interior sofisticado o torna ideal para viagens longas."
     },
     {
       "marca": "Mercedes",
-      "modelo": "S450",
+      "modelo": "S200",
       "ano": 2020,
       "cor": "Preto",
       "categoria": "Sedan",
-      "src": "/Mercedes-Benz-S450.png",
+      "src": "/Mercedes-S200.png",
       "preco": 2100,
       "descricao": "O Mercedes-Benz S450 é um sedã de luxo que oferece um passeio suave e tranquilo. Seu design clássico é um símbolo de status e elegância."
     },
