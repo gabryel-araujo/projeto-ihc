@@ -23,7 +23,7 @@ import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import Footer from "./Components/Footer";
 
-export default function Home() {
+function Home() {
   const Toast = Swal.mixin({
     toast: true,
     position: "bottom-end",
@@ -441,3 +441,5 @@ export default function Home() {
     </>
   );
 }
+
+export default Home;
