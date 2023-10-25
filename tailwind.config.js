@@ -9,10 +9,10 @@ module.exports = withMT({
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      screens: {
+        sm: "640px", // Pequenas telas
+        md: "768px", // Telas médias
+        lg: "1024px", // Telas grandes
       },
     },
   },
