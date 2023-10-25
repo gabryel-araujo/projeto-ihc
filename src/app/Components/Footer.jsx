@@ -1,3 +1,4 @@
+"use client";
 function Footer() {
   return (
     <section className="bg-black h-full mt-16">
