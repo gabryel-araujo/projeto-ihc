@@ -4,7 +4,7 @@ import { Nav } from "./Components/Nav";
 import { SidebarWithContentSeparator } from "./Components/sideBar";
 //importando o json de carros
 import carros from "./carros.json";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import {
   Card,
   CardHeader,
@@ -12,14 +12,12 @@ import {
   CardFooter,
   Typography,
   Button,
-  Tooltip,
   IconButton,
   Dialog,
   DialogHeader,
   DialogBody,
   DialogFooter,
   Input,
-  Textarea,
 } from "@material-tailwind/react";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
@@ -45,20 +43,16 @@ export default function Home() {
   const [passwordField, setPasswordField] = useState(false);
   const handleOpenPsswd = () => setPasswordField(true);
   const handleClosePsswd = () => setPasswordField(false);
-  const [email, setEmail] = useState("");
-  const onChange = ({ target }) => setEmail(target.value);
-
-  useEffect(() => {
-    console.log(carrosJson);
-  }, []);
+  const textRef = useRef(null);
+  const emailRef = useRef(null);
 
   return (
     <>
       <div className="background-gt h-screen w-full flex flex-col justify-end">
         <Nav abrirModal={handleOpen} />
         <div className="bg-black/75 h-32 flex flex-col justify-center items-center">
-          <h1 className="lilitaOne text-white text-4xl">
-            SEU NOVO CARRO ESTÁ AQUI!
+          <h1 className="lilitaOne text-white text-4xl titulo">
+            O CARRO DOS SEUS SONHOS ESTÁ AQUI!
           </h1>
           <a
             className="animate-bounce bg-white rounded-full mt-4 hover:cursor-pointer w-8 h-8 flex justify-center items-center"
@@ -82,13 +76,13 @@ export default function Home() {
         </div>
       </div>
       <div
-        className="bg-black h-screen flex flex-col items-center shadow-md"
+        className="bg-black h-full flex flex-col items-center shadow-md"
         id="quemSomos"
       >
-        <div className="container mx-auto">
+        <div className="container mx-auto h-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-6">
-            <div className="flex flex-col justify-center items-center text-white mt-16">
-              <p className="lilitaOne text-4xl">Quem Somos</p>
+            <div className="flex flex-col justify-center items-center text-white mt-16 p-4">
+              <p className="text-4xl font-bold">Quem Somos</p>
               <p className="text-justify mt-4 tiltNeon">
                 A Elegance Veículos é uma empresa que atua no mercado de
                 veículos alto padrão desde 2001, com o objetivo de proporcionar
@@ -101,8 +95,8 @@ export default function Home() {
                 experiência inigualável.
               </p>
             </div>
-            <div className="flex flex-col justify-center items-center text-white mt-16">
-              <p className="lilitaOne text-4xl">Nossos Serviços</p>
+            <div className="flex flex-col justify-center items-center text-white mt-16 p-4">
+              <p className="text-4xl font-bold">Nossos Serviços</p>
               <p className="text-justify mt-4 tiltNeon">
                 Na Elegance Veículos, oferecemos uma seleção excepcional de
                 supercarros e carros de luxo disponíveis para aluguel. Desde os
@@ -117,10 +111,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col items-center">
-          <div className="flex gap-32 mt-16">
+        <div className="mt-6 sm:mt-16 flex flex-col items-center bg-black w-full">
+          <div className="flex flex-col sm:flex-row gap-6 mt-6 gapMobile">
             <div className="flex flex-col items-center">
-              <section className="h-32 w-32 bg-gradient-to-r from-orange-500 to-orange-700 rounded-full flex items-center justify-center">
+              <section className="h-[8rem] w-[8rem] bg-gradient-to-r from-orange-500 to-orange-700 rounded-full flex items-center justify-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -132,15 +126,15 @@ export default function Home() {
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"
+                    d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75"
                   />
                 </svg>
               </section>
-              <p className="text-white lilitaOne text-lg">Acessibilidade</p>
+              <p className="text-white text-lg">Acessibilidade</p>
             </div>
 
             <div className="flex flex-col items-center">
-              <section className="h-32 w-32 bg-gradient-to-r from-orange-500 to-orange-700 rounded-full flex items-center justify-center">
+              <section className="h-[8rem] w-[8rem] bg-gradient-to-r from-orange-500 to-orange-700 rounded-full flex items-center justify-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -156,11 +150,11 @@ export default function Home() {
                   />
                 </svg>
               </section>
-              <p className="text-white text-xl lilitaOne">Segurança</p>
+              <p className="text-white text-xl">Segurança</p>
             </div>
 
             <div className="flex flex-col items-center">
-              <section className="h-32 w-32 bg-gradient-to-r from-orange-500 to-orange-700 rounded-full flex items-center justify-center">
+              <section className="h-[8rem] w-[8rem] bg-gradient-to-r from-orange-500 to-orange-700 rounded-full flex items-center justify-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -176,37 +170,36 @@ export default function Home() {
                   />
                 </svg>
               </section>
-              <p className="text-white text-xl lilitaOne">Satisfação</p>
+              <p className="text-white text-xl">Satisfação</p>
             </div>
           </div>
         </div>
       </div>
 
       <div
-        className="h-25 flex flex-col justify-center items-center gradient-bg"
+        className="h-14 flex flex-col justify-center items-center gradient-bg"
         id="carros"
       >
-        <p className="text-black text-4xl mt-12 lilitaOne sombra">
-          Nossos Carros
-        </p>
+        <p className="font-bold text-xl">Carros disponíveis</p>
       </div>
-      {/* <div className=" bg-black p-6 flex flex-col items-center"> */}
-      <p className="text-white text-4xl mt-12 lilitaOne">Nossos Carros</p>
-      <div className=" bg-slate-600 grid grid-cols-4 p-4 rounded-md bg-white">
-        <div className="col-span-1">
+      <div className="mt-4 ml-10 font-bold">
+        <p>Exibindo {18} resultados</p>
+      </div>
+      <div className="bg-slate-600 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-4 rounded-md bg-white gap-4">
+        <div className="col-span-1 sm:col-span-1 md:col-span-1 lg:col-span-1 flex justify-center">
           <SidebarWithContentSeparator />
         </div>
-        <div className="col-span-3 flex flex-wrap gap-4 h-screen overflow-scroll">
+        <div className="col-span-1 sm:col-span-1 md:col-span-1 lg:col-span-3 flex flex-wrap gap-4 h-auto sm:h-[34rem] overflow-auto justify-center">
           {carrosJson.carros.map((carro) => {
             return (
               <Card
-                className="w-80 max-w-[26rem] shadow-lg flex flex-col justify-between bg-gray-200"
+                className="w-80 max-w-[26rem] shadow-lg flex flex-col justify-between bg-gray-200 mb-4"
                 key={carro.modelo}
               >
                 <CardHeader
                   floated={false}
                   color="gray"
-                  className="flex justify-center items-center h-56"
+                  className="flex justify-center items-center h-56 relative"
                 >
                   <img
                     src={carro.src}
@@ -264,7 +257,7 @@ export default function Home() {
                 </CardBody>
                 <CardFooter className="pt-3">
                   <Button size="lg" fullWidth={true} onClick={handleOpen}>
-                    Reservar
+                    R${carro.preco},00 / dia
                   </Button>
                 </CardFooter>
               </Card>
@@ -272,7 +265,6 @@ export default function Home() {
           })}
         </div>
       </div>
-      {/* </div> */}
 
       {/* Modal */}
       <Dialog open={open} handler={handleOpen}>
@@ -387,22 +379,43 @@ export default function Home() {
         </DialogFooter>
       </Dialog>
       {/* Footer / Fale conosco */}
-      <div className="h-screen flex flex-col justify-end items-center ">
-        <div className="bg-gradient-to-r from-orange-500 to-orange-700 w-3/5 h-72 rounded-lg absolute mb-52 flex items-center justify-around p-4 gap-2">
-          <div className="flex flex-col w-1/2">
-            <p className="text-white text-4xl lilitaOne sombra">Fale conosco</p>
+      <div
+        className="h-screen flex flex-col justify-end items-center"
+        id="faleConosco"
+      >
+        <div
+          className="bg-gradient-to-r from-orange-500 to-orange-700 w-full md:w-3/5 h-72 rounded-lg absolute md:mb-52 flex items-center justify-around p-4 gap-2 md:flex-row flex-col"
+          id="email"
+        >
+          <div className="flex flex-col w-full md:w-1/2">
+            <p className="text-white text-4xl sombra lilitaOne">Fale conosco</p>
             <span className="tiltNeon text-white sombra">
               Sua mensagem aqui:
             </span>
-            <textarea className="h-24 rounded-md p-2 resize-none shadow-lg focus:outline-none"></textarea>
+            <textarea
+              className="h-24 rounded-md p-2 resize-none shadow-lg focus:outline-none"
+              ref={textRef}
+            ></textarea>
             <span className="tiltNeon text-white sombra">Email:</span>
             <input
               type="email"
               className="h-8 rounded-md shadow-lg p-2 focus:outline-none"
+              ref={emailRef}
             />
           </div>
-          <div className="flex items-center justify-center">
-            <Button className="flex items-center gap-3 justify-between bg-white text-black h-10 h-12">
+          <div className="flex flex-col items-center justify-between">
+            <img src="/imagem-email.svg" alt="" />
+            <Button
+              className="flex items-center gap-3 justify-between bg-white text-black h-10 h-12"
+              onClick={(e) => {
+                Toast.fire({
+                  icon: "success",
+                  title: "Email enviado com sucesso!",
+                });
+                textRef.current.value = "";
+                emailRef.current.value = "";
+              }}
+            >
               Enviar Email
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -421,7 +434,7 @@ export default function Home() {
             </Button>
           </div>
         </div>
-        <div className="h-72 w-full flex justify-end bg-black">
+        <div className="h-72 w-full bg-black">
           <Footer />
         </div>
       </div>

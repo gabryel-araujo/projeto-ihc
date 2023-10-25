@@ -22,6 +22,20 @@ import {
 import { ChevronRightIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCar, faTag } from "@fortawesome/free-solid-svg-icons";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+
+const Toast = Swal.mixin({
+  toast: true,
+  position: "bottom-end",
+  showConfirmButton: false,
+  timer: 4000,
+  timerProgressBar: true,
+  didOpen: (toast) => {
+    toast.addEventListener("mouseenter", Swal.stopTimer);
+    toast.addEventListener("mouseleave", Swal.resumeTimer);
+  },
+});
 
 export function SidebarWithContentSeparator() {
   const [open, setOpen] = useState(0);
@@ -335,6 +349,12 @@ export function SidebarWithContentSeparator() {
         <Button
           variant="outlined"
           className="flex items-center gap-3 justify-between bg-black text-white h-10"
+          onClick={(e) => {
+            Toast.fire({
+              icon: "error",
+              title: "Não encontramos carros para esse filtro!",
+            });
+          }}
         >
           Filtrar
           <svg
@@ -359,6 +379,7 @@ export function SidebarWithContentSeparator() {
             return (
               <Chip
                 value={item}
+                key={item}
                 className="bg-gradient-to-r from-orange-500 to-orange-700 text-black text-center"
               />
             );
