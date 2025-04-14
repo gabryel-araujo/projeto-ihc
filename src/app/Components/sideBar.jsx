@@ -77,7 +77,7 @@ export function SidebarWithContentSeparator() {
               className="border-b-0 p-3"
             >
               <ListItemPrefix>
-                <FontAwesomeIcon icon={faCar} />
+                {/* <FontAwesomeIcon icon={faCar} /> */}
               </ListItemPrefix>
               <Typography color="blue-gray" className="mr-auto font-normal">
                 Categoria
@@ -197,7 +197,7 @@ export function SidebarWithContentSeparator() {
               className="border-b-0 p-3"
             >
               <ListItemPrefix>
-                <FontAwesomeIcon icon={faTag} />
+                {/* <FontAwesomeIcon icon={faTag} /> */}
               </ListItemPrefix>
               <Typography color="blue-gray" className="mr-auto font-normal">
                 Marcas

@@ -43,7 +43,7 @@ export function Nav({ abrirModal }) {
         className="p-1 font-normal"
       >
         <section className="flex items-center gap-1">
-          <FontAwesomeIcon icon={faCarSide} />
+          {/* <FontAwesomeIcon icon={faCarSide} /> */}
           <a href="#carros" className="flex items-center">
             Carros
           </a>
@@ -57,7 +57,7 @@ export function Nav({ abrirModal }) {
         className="p-1 font-normal"
       >
         <section className="flex items-center gap-1">
-          <FontAwesomeIcon icon={faQuestion} />
+          {/* <FontAwesomeIcon icon={faQuestion} /> */}
           <a href="#quemSomos" className="flex items-center">
             Sobre nós
           </a>
@@ -73,7 +73,7 @@ export function Nav({ abrirModal }) {
           className="flex items-center gap-1 hover:cursor-pointer"
           onClick={abrirModal}
         >
-          <FontAwesomeIcon icon={faUser} />
+          {/* <FontAwesomeIcon icon={faUser} /> */}
 
           <a className="flex items-center">Conta</a>
         </section>
